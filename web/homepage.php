@@ -7,10 +7,11 @@
     <title>Homepage</title>
 </head>
 <body>
-<header>White Ranger</header>
-<img src="whiteranger" alt="white ranger">
+    <header>White Ranger</header>
+    <img src="whiteranger.jpg" alt="white ranger">
+
     <?php 
-    
+        echo date("l jS \of F Y h:i:s A") . "<br>";
     ?>
 </body>
 </html>
