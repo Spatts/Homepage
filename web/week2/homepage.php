@@ -13,13 +13,17 @@
         <h1>White Ranger</h1>
     </div>
     <img src="whiteranger.jpg" alt="white ranger">
-
+    <p>
+    Lord Drakkon[1] was an evil Power Ranger who controls the Black Dragon and battles the Power Rangers. 
+    He is a cruel and older version of Tommy Oliver from an alternate reality who rules his Earth with an 
+    iron fist from a dystopiac and futuristic Angel Grove.
+    </p>
     <br>
-    <footer>
-        <?php 
-            date_default_timezone_set('America/Denver');
-            echo date("l jS \of F Y h:i:s A") . "<br>";
-        ?>
-    </footer>
+
+    <?php 
+        date_default_timezone_set('America/Denver');
+        echo date("l jS \of F Y h:i:s A") . "<br>";
+    ?>
+
 </body>
 </html>
