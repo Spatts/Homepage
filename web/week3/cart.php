@@ -1,35 +1,35 @@
 <?php
-		session_start();
-		$key0 = $_SESSION['inCart0'];
-		$key1 = $_SESSION['inCart1'];
-        $key2 = $_SESSION['inCart2'];
-        $key3 = $_SESSION['inCart3'];
-		$key4 = $_SESSION['inCart4'];
-		$key5 = $_SESSION['inCart5'];
-		if(!ctype_digit($key0)){
-			$key0 = 0;
-		}
-		if(!ctype_digit($key1)){
-			$key1 = 0;
-		}
-		if(!ctype_digit($key2)){
-			$key2 = 0;
-        }
-        if(!ctype_digit($key3)){
-            $key3 = 0;
-        }
-        if(!ctype_digit($key4)){
-            $key4 = 0;
-        }
-        if(!ctype_digit($key5)){
-            $key5 = 0;
-        }
+    session_start();
+	$key0 = $_SESSION['inCart0'];
+	$key1 = $_SESSION['inCart1'];
+    $key2 = $_SESSION['inCart2'];
+    $key3 = $_SESSION['inCart3'];
+	$key4 = $_SESSION['inCart4'];
+	$key5 = $_SESSION['inCart5'];
+	if(!ctype_digit($key0)){
+		$key0 = 0;
+	}
+	if(!ctype_digit($key1)){
+		$key1 = 0;
+	}
+	if(!ctype_digit($key2)){
+		$key2 = 0;
+    }
+    if(!ctype_digit($key3)){
+        $key3 = 0;
+    }
+    if(!ctype_digit($key4)){
+        $key4 = 0;
+    }
+    if(!ctype_digit($key5)){
+        $key5 = 0;
+    }
 
-        $books = array("Black Prism", "Dawn of Wonder", "Hell Divers",
-        "Promise of Blood", "Shadow of What Was Lost", "Way of Kings");
-        $prices = array(40, 40, 40, 40, 40, 40);
-        $pics = array("blackprism.jpg", "dawnofwonder.jpg", "helldivers.jpg",
-        "powdermage.png", "shadowofwhatwaslost.jpg", "wayofkings.jpg");
+    $books = array("Black Prism", "Dawn of Wonder", "Hell Divers",
+        "Promise of Blood", "The Shadow of What Was Lost", "Way of Kings");
+    $prices = array(40, 40, 40, 40, 40, 40);
+    $pics = array("blackprism.jpg", "dawnofwonder.jpg", "helldivers.jpg",
+        "powdermage.jpg", "shadowofwhatwaslost.jpg", "wayofkings.jpg");
 	$total = ($key0 * $prices[0]) + ($key1 * $prices[1]) + ($key2 * $prices[2]);
 	
 	if(isset($_POST['submit'])){

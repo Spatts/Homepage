@@ -1,20 +1,20 @@
 <?php
-session_start();
-class Product {
-    public function __construct($pic, $name, $price, $count) {
-        $this->pic = $pic;
-        $this->name = $name;
-        $this->price = $price;
-        $this->count = $count;
+    session_start();
+    class Product {
+        public function __construct($pic, $name, $price, $count) {
+            $this->pic = $pic;
+            $this->name = $name;
+            $this->price = $price;
+            $this->count = $count;
     }
 }
 $products = array();
 $cartItems = array();
 $books = array("Black Prism", "Dawn of Wonder", "Hell Divers",
-                    "Promise of Blood", "Shadow of What Was Lost", "Way of Kings");
+                    "Promise of Blood", "The Shadow of What Was Lost", "Way of Kings");
 $prices = array(44, 40, 25, 35, 38, 45);
 $pics = array("blackprism.jpg", "dawnofwonder.jpg", "helldivers.jpg",
-                    "powdermage.png", "shadowofwhatwaslost.jpg", "wayofkings.jpg");
+                    "powdermage.jpg", "shadowofwhatwaslost.jpg", "wayofkings.jpg");
 $count = array(0,0,0,0,0,0);
 $total = 0;
 for($i = 0; $i <6; $i++){
@@ -26,6 +26,9 @@ if(isset($_POST['submit'])){
     $_SESSION['inCart0'] = htmlentities($_POST['inCart0']);
     $_SESSION['inCart1'] = htmlentities($_POST['inCart1']);
     $_SESSION['inCart2'] = htmlentities($_POST['inCart2']);
+    $_SESSION['inCart3'] = htmlentities($_POST['inCart3']);
+    $_SESSION['inCart4'] = htmlentities($_POST['inCart4']);
+    $_SESSION['inCart5'] = htmlentities($_POST['inCart5']);
     header('Location: cart.php');
 }
 ?>
@@ -120,7 +123,7 @@ if(isset($_POST['submit'])){
             <input type="submit" name="submit" class="btn btn-dark btn-lg" value="Proceed to View Cart">
         </div>
     </form>
-    
+
 
 </body>
 </html>
