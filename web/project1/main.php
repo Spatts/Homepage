@@ -14,7 +14,7 @@
 </head>
 <body>
 <?php
-  require("navbar.php");
+  //require("navbar.php");
 ?>
 <div class="jumbotron text-center jumbo">
   <h1>Homepage</h1>
