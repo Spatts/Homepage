@@ -1,5 +1,7 @@
 function promptBook(){
     var bookID = document.getElementById("book_id").value;
+    console.log("Book id is")
+    console.log(bookID);
     if(confirm("Are you sure you want to delete this book?")){
         window.location.href = "removeBook.php?book_id=" + bookID;
     }
