@@ -10,14 +10,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="project1.css">
-  <title>Homepage</title>
+  <title>Watch List</title>
 </head>
 <body>
 <?php
   require("navbar.php");
 ?>
 <div class="jumbotron text-center jumbo">
-  <h1>Homepage</h1>
+  <h1>Watch List</h1>
 </div>
     <h2>Books</h2>
 <?php
@@ -93,8 +93,8 @@
       <h4><?php echo $desc; ?></h4> 
     </div>   
     <div>
-        <a href="editComic.phpcomic_id=<?php echo $comicID; ?>"><input type="submit" name="Edit Comic" value="Edit Comic" class="btn btn-warning btn-sm"></a>
-        <input onclick="promptComic()" type="button" name="Remove Comic" value="Remove Comic" class="btn btn-danger btn-sm">
+        <a href="editComic.phpcomic_id=<?php echo $comicID; ?>"><input type="submit" name="Edit Comic" value="Edit Comic" class="btn btn-warning btn-sm button1"></a>
+        <input onclick="promptComic()" type="button" name="Remove Comic" value="Remove Comic" class="btn btn-danger btn-sm button2">
     </div>    
   </div>
 <?php
