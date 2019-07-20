@@ -67,6 +67,7 @@
       <h4><?php echo $desc; ?></h4> 
     </div>
     <div>
+        <input id="movie_id" type="hidden" name="movie_id" value="<?php echo $movieID; ?>"> 
         <a href="editMovie.php?movie_id=<?php echo $movieID; ?>"><input type="submit" name="Edit Movie" value="Edit Movie" class="btn btn-warning btn-sm"></a>
         <input onclick="promptMovie()" type="button" name="Remove Movie" value="Remove Movie" class="btn btn-danger btn-sm">
     </div>    
@@ -94,6 +95,7 @@
       <h4><?php echo $desc; ?></h4> 
     </div>   
     <div>
+        <input id="comic_id" type="hidden" name="comic_id" value="<?php echo $comicID; ?>"> 
         <a href="editComic.phpcomic_id=<?php echo $comicID; ?>"><input type="submit" name="Edit Comic" value="Edit Comic" class="btn btn-warning btn-sm button1"></a>
         <input onclick="promptComic()" type="button" name="Remove Comic" value="Remove Comic" class="btn btn-danger btn-sm button2">
     </div>    
