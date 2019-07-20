@@ -39,6 +39,7 @@
       <h4><?php echo $desc; ?></h4> 
     </div>    
     <div>
+        <input id="book_id" type="hidden" name="book_id" value="<?php echo $bookID; ?>"> 
         <a href="editBook.php?book_id=<?php echo $bookID; ?>"><input type="submit" name="Edit Book" value="Edit Book" class="btn btn-warning btn-sm"></a>
         <input onclick="promptBook()" type="button" name="Remove Book" value="Remove Book" class="btn btn-danger btn-sm">
     </div>
