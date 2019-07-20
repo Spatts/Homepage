@@ -10,6 +10,6 @@
     $stmt->bindValue(':photo', $photo, PDO::PARAM_STR);
     $stmt->bindValue(':movieName', $name, PDO::PARAM_STR);
     $stmt->execute();
-    header("Location: frontpage.php");
+    header("Location: main.php");
     die();
 ?>

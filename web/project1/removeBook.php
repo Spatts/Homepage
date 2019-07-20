@@ -4,6 +4,6 @@
     $db = get_db();
     $stmt = $db->prepare("DELETE FROM book WHERE book_id=$bookID;");
     $stmt->execute();
-    header("Location: frontpage.php");
+    header("Location: main.php");
     die();
 ?>

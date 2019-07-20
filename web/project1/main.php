@@ -9,16 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project1.css">
   <title>Homepage</title>
 </head>
 <body>
 <?php
-  //require("navbar.php");
+  require("navbar.php");
 ?>
 <div class="jumbotron text-center jumbo">
   <h1>Homepage</h1>
 </div>
+    <h2>Books</h2>
 <?php
   foreach ($db->query('SELECT b.book_name, b.book_description, b.book_photo, b.book_id FROM book b ORDER BY book_id DESC') as $row)
   {
@@ -37,11 +38,15 @@
     <div>
       <h4><?php echo $desc; ?></h4> 
     </div>    
+    <div>
+        <a href="editBook.php?book_id=<?php echo $bookID; ?>"><input type="submit" name="Edit Book" value="Edit Book" class="btn btn-warning btn-sm"></a>
+        <input onclick="promptBook()" type="button" name="Remove Book" value="Remove Book" class="btn btn-danger btn-sm">
+    </div>
   </div>
 <?php
   }
 ?>
-
+<h2>Movies</h2>
 <?php
   foreach ($db->query('SELECT m.movie_name, m.movie_description, m.movie_photo, m.movie_id FROM movie m ORDER BY movie_id DESC') as $row)
   {
@@ -59,12 +64,16 @@
     </div>
     <div>
       <h4><?php echo $desc; ?></h4> 
+    </div>
+    <div>
+        <a href="editMovie.php?movie_id=<?php echo $movieID; ?>"><input type="submit" name="Edit Movie" value="Edit Movie" class="btn btn-warning btn-sm"></a>
+        <input onclick="promptMovie()" type="button" name="Remove Movie" value="Remove Movie" class="btn btn-danger btn-sm">
     </div>    
   </div>
 <?php
   }
 ?>
-
+<h2>Comics</h2>
 <?php
   foreach ($db->query('SELECT c.comic_name, c.comic_description, c.comic_photo, c.comic_id FROM comic c ORDER BY comic_id DESC') as $row)
   {
@@ -82,10 +91,15 @@
     </div>
     <div>
       <h4><?php echo $desc; ?></h4> 
+    </div>   
+    <div>
+        <a href="editComic.phpcomic_id=<?php echo $comicID; ?>"><input type="submit" name="Edit Comic" value="Edit Comic" class="btn btn-warning btn-sm"></a>
+        <input onclick="promptComic()" type="button" name="Remove Comic" value="Remove Comic" class="btn btn-danger btn-sm">
     </div>    
   </div>
 <?php
   }
 ?>
+<script type="text/javascript" src="promptDelete.js"></script>
 </body>
 </html>
